@@ -1,6 +1,6 @@
-#############################<br>
-## steves_webastardo_v3.0+ ##<br>
-#############################<br>
+#######################<br>
+steves_webastardo_v3.0+ <br>
+#######################<br>
 
 Code for the webastardo v3.0 board by Simon Rafferty.<br>
 SimonSFX@Outlook.com 2022<br>
@@ -17,9 +17,9 @@ Changes I've made (hardware & software).<br>
 ADC2 has some restrictions on the feather huzzah32 wifi micro-controller:<br>
 ADC2 is used by the Wi-Fi driver, so ADC2 is only usable when the Wi-Fi driver has not started.<br>
 Three of the ADC2 pins are strapping pins and thus should be used with caution. Strapping pins -<br>
-- are used during power-on/reset to configure the device boot mode, the operating voltage, and other initial settings<br>
+are used during power-on/reset to configure the device boot mode, the operating voltage, and other initial settings<br>
 Importantly, the official Adafruit docs for the Huzzah32 are confusing: -<br>
-- they state that “you can only read analog inputs on ADC #1 once WiFi has started”. <br>
+they state that “you can only read analog inputs on ADC #1 once WiFi has started”. <br>
 Through experimentation, I found that Adafruit intended to say simply that "ADC#2 is unavailable once WiFi has started" (so you can only use ADC#1).<br>
 
 ADC#1 pins.<br>
@@ -29,7 +29,7 @@ A0,A1,A5,A6,A8,A10,A11,A12.<br>
 
 IMPORTANT.<br>
 To use ADC#1 pins we have to change WebastardoV3.0 board a little, -<br>
-- cut 3 of the traces and wire 3 new links to the new pins, see Steves' part 1 video.<br>
+cut 3 of the traces and wire 3 new links to the new pins, see Steves' part 1 video.<br>
 Link: https://www.youtube.com/watch?v=f0CdLafApvU<br>
 
 New Pinout for Adafruit Feather Huzzah32 board (wifi):<br>
